@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0bb01ba1-e4ea-437f-93b6-12d7d213a21b" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Vimc4XlcflSUTTSqKmJBXD0T82" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.7.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/controllers/api/routes/orgs" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/controllers/db" />
+      <recent name="$PROJECT_DIR$/src/controllers/db/tables" />
+      <recent name="$PROJECT_DIR$/src/controllers/api/routes/users" />
+      <recent name="$PROJECT_DIR$/src/actions/user" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/controllers/api/routes/orgs" />
+      <recent name="$PROJECT_DIR$/src/actions/org" />
+      <recent name="$PROJECT_DIR$/src/entities/org" />
+      <recent name="$PROJECT_DIR$/src/controllers/db" />
+      <recent name="$PROJECT_DIR$/src/controllers/api/routes/users" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v13.5.0/bin/node" />
+      <envs>
+        <env name="MYSQL_HOST" value="localhost" />
+        <env name="MYSQL_USER" value="root" />
+        <env name="MYSQL_PASSWORD" value="N207ES" />
+        <env name="MYSQL_DB" value="squadopsgg" />
+        <env name="MYSQL_CREATE_TABLES" value="true" />
+        <env name="PORT" value="4051" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0bb01ba1-e4ea-437f-93b6-12d7d213a21b" name="Default Changelist" comment="" />
+      <created>1577744365183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577744365183</updated>
+      <workItem from="1577744366351" duration="26987000" />
+      <workItem from="1578003530167" duration="9000" />
+      <workItem from="1578003553531" duration="19762000" />
+      <workItem from="1578376005285" duration="14034000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
