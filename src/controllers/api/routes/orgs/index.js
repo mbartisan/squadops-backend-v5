@@ -1,7 +1,7 @@
 import {
     listOrgs,
-    listUsers,
-    addUser,
+    listOrgUsers,
+    addOrgUser,
     listRoles,
     addRole,
     listRoleUsers,
@@ -15,8 +15,8 @@ import {
 
 import makeGetOrgs from "./get-orgs.js";
 
-import makeGetUsers from "./get-users.js";
-import makePostUsers from "./post-users.js";
+import makeGetOrgUsers from "./get-org-users.js";
+import makePostOrgUsers from "./post-org-users.js";
 
 import makeGetRoles from "./get-roles.js";
 import makePostRoles from "./post-roles.js";
@@ -33,8 +33,8 @@ export default function makeOrgsRouteControllers({ makeHTTPResponse }) {
 
     const getOrgs = makeGetOrgs({ makeHTTPResponse, listOrgs });
 
-    const getUsers = makeGetUsers({ makeHTTPResponse, listUsers });
-    const postUsers = makePostUsers({ makeHTTPResponse, addUser });
+    const getOrgUsers = makeGetOrgUsers({ makeHTTPResponse, listOrgUsers });
+    const postOrgUsers = makePostOrgUsers({ makeHTTPResponse, addOrgUser });
 
     const getRoles = makeGetRoles({ makeHTTPResponse, listRoles });
     const postRoles = makePostRoles({ makeHTTPResponse, addRole });
@@ -49,8 +49,8 @@ export default function makeOrgsRouteControllers({ makeHTTPResponse }) {
 
     return Object.freeze({
         getOrgs,
-        getUsers,
-        postUsers,
+        getOrgUsers,
+        postOrgUsers,
         getRoles,
         postRoles,
         getTeams,

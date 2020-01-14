@@ -1,5 +1,5 @@
-export default function makeListUsers({ orgsDb, usersDb }) {
-    return async function listUsers(searchParameters) {
+export default function makeListOrgUsers({ orgsDb, usersDb }) {
+    return async function listOrgUsers(searchParameters) {
         const scopeUsers = (await orgsDb.orgUsers.query.findAll(searchParameters));
         const userIds = scopeUsers.map(({userId})=>(userId));
         const [

@@ -1,12 +1,12 @@
-export default function makePostUsers({ makeHTTPResponse, addUser }) {
-    return async function postUsers(httpRequest) {
+export default function makePostOrgUsers({ makeHTTPResponse, addOrgUser }) {
+    return async function postOrgUsers(httpRequest) {
         try {
             const userInfo = {
                 ...httpRequest.body,
                 ...httpRequest.params
             };
 
-            const createdUser = await addUser(userInfo);
+            const createdUser = await addOrgUser(userInfo);
 
             return makeHTTPResponse({ statusCode: 201, body: createdUser });
         } catch (e) {

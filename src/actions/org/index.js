@@ -1,8 +1,8 @@
 import makeAddOrg from "./add-org.js";
 import makeEditOrg from "./edit-org.js";
 import makeListOrgs from "./list-orgs.js";
-import makeAddUser from "./add-user.js";
-import makeListUsers from "./list-users.js";
+import makeAddOrgUser from "./add-org-user.js";
+import makeListOrgUsers from "./list-org-users.js";
 import makeAddRole from "./add-role.js";
 import makeEditRole from "./edit-role.js";
 import makeListRoles from "./list-roles.js";
@@ -23,8 +23,8 @@ const addOrg = makeAddOrg({ orgsDb });
 const editOrg = makeEditOrg({ orgsDb });
 const listOrgs = makeListOrgs({ orgsDb });
 
-const addUser = makeAddUser({ orgsDb });
-const listUsers = makeListUsers({ orgsDb, usersDb });
+const addOrgUser = makeAddOrgUser({ orgsDb });
+const listOrgUsers = makeListOrgUsers({ orgsDb, usersDb });
 
 const addRole = makeAddRole({ orgsDb });
 const editRole = makeEditRole({ orgsDb });
@@ -47,14 +47,14 @@ const orgService = Object.freeze({
     editOrg,
     listOrgs,
     addRole,
-    listUsers,
+    listOrgUsers,
     editRole,
     listRoles,
     addTeam,
     editTeam,
     listTeams,
     listTeamUsers,
-    addUser,
+    addOrgUser,
     addRoleUser,
     addTeamUser,
     editTeamUser,
@@ -67,8 +67,8 @@ export {
     addOrg,
     editOrg,
     listOrgs,
-    addUser,
-    listUsers,
+    addOrgUser,
+    listOrgUsers,
     addRole,
     editRole,
     listRoles,
