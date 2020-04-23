@@ -1,4 +1,3 @@
-import "./config.js";
-import api from "./src/controllers/api/index.js";
+import * as apiHttpServer from "./src/controllers/api-http/index.js";
 
-api();
+apiHttpServer.startServer();

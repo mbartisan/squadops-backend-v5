@@ -1,5 +1,5 @@
-export default function makeListOrgs({ orgsDb }) {
+export default function makeListOrgs({ db }) {
     return async function listOrgs(searchParameters) {
-        return await orgsDb.orgs.query.findAll(searchParameters);
+        return await db.orgs.orgs.query.findAll(searchParameters);
     }
 }

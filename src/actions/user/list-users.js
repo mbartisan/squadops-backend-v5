@@ -1,5 +1,5 @@
-export default function makeListUsers({ usersDb }) {
+export default function makeListUsers({ db }) {
     return async function listUsers(searchParameters) {
-        return await usersDb.users.query.findAll(searchParameters);
+        return await db.users.users.query.findAll(searchParameters);
     }
 }

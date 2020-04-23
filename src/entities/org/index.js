@@ -1,22 +1,26 @@
 import buildMakeOrg from "./org.js";
-import buildMakeTeam from "./team.js";
-import buildMakeRole from "./role.js";
-import buildMakeOrgUser from "./orgUser.js";
-import buildMakeTeamUser from "./teamUser.js";
-import buildMakeRoleUser from "./roleUser.js";
+import buildMakeOrgRole from "./org-role.js";
+import buildMakeOrgTeam from "./org-team.js";
+import buildMakeOrgTag from "./org-tag.js";
+import buildMakeOrgMember from "./org-member.js";
+import buildMakeTeamMember from "./team-member.js";
+import buildMakeTagMember from "./tag-member.js";
 
-const makeRole = buildMakeRole();
-const makeTeam = buildMakeTeam();
 const makeOrg = buildMakeOrg();
-const makeOrgUser = buildMakeOrgUser();
-const makeTeamUser = buildMakeTeamUser();
-const makeRoleUser = buildMakeRoleUser();
+const makeOrgRole = buildMakeOrgRole();
+const makeOrgTeam = buildMakeOrgTeam();
+const makeOrgTeamMember = buildMakeTeamMember();
+const makeOrgTag = buildMakeOrgTag();
+const makeOrgTagMember = buildMakeTagMember();
+const makeOrgMember = buildMakeOrgMember();
+
 
 export {
     makeOrg,
-    makeTeam,
-    makeRole,
-    makeOrgUser,
-    makeTeamUser,
-    makeRoleUser
+    makeOrgRole,
+    makeOrgTeam,
+    makeOrgTag,
+    makeOrgMember,
+    makeOrgTeamMember,
+    makeOrgTagMember
 }

@@ -1,39 +1,37 @@
-import makeUsersDb from './users-db.js'
-import makeOrgsDb from "./orgs-db.js";
 import mysql from 'mysql2'
+import loadConfig from "../../../configs/index.js";
+import makeUsersDb from './tables/users.js'
+import makeOrgsDb from "./tables/orgs.js";
+import makeEventsDb from "./tables/events.js";
 
-const host = process.env.MYSQL_HOST;
-const user = process.env.MYSQL_USER;
-const password = process.env.MYSQL_PASSWORD;
-const database = process.env.MYSQL_DB;
-const CREATE_TABLES = process.env.MYSQL_CREATE_TABLES || false;
+const config = loadConfig()['db'];
 
 const pool = mysql.createPool({
-    host,
-    user,
-    password,
-    database,
     waitForConnections: true,
     connectionLimit: 20,
-    queueLimit: 0 // 0 = unlimited
+    queueLimit: 0, // 0 = unlimited
+    ...config.connection
 });
 
-const usersDb = makeUsersDb({ makeTable });
-const orgsDb = makeOrgsDb({ makeTable });
+const users = makeUsersDb({ makeTable });
+const orgs = makeOrgsDb({ makeTable });
+const events = makeEventsDb({ makeTable });
 
-const dbControllers = Object.freeze({
-    usersDb,
-    orgsDb
+const db = Object.freeze({
+    users,
+    orgs,
+    events
 });
 
-export default dbControllers;
+export default db;
 export {
-    usersDb,
-    orgsDb
+    users,
+    orgs,
+    events
 };
 
-export function makeTable(tableName, schema) {
-    if (schema && CREATE_TABLES) createTable({ tableName, ...schema }).then((res) => (res.warningStatus === 0) ? console.log(tableName + " Table created.") : null);
+function makeTable(tableName, schema) {
+    if (schema && config.createTables) createTable({ tableName, ...schema }).then((res) => (res.warningStatus === 0) ? console.log(tableName + " Table created.") : null);
 
     return Object.freeze({
         pool,

@@ -8,6 +8,7 @@ export default function buildMakeUser ({ md5, uuid }) {
             createdAt = ((Date.now() / 1000).toFixed()),
             updatedAt = ((Date.now() / 1000).toFixed())
         } = {}) {
+
         if (!name) {
             throw new Error("User must have a name.");
         }
@@ -15,6 +16,7 @@ export default function buildMakeUser ({ md5, uuid }) {
         if (name.length < 2) {
             throw new Error("User's name must be longer than 2 characters.");
         }
+
         if (!email) {
             throw new Error("User must have an email.");
         }

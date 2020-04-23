@@ -1,13 +1,16 @@
 import buildMakeEvent from "./event.js";
-import buildMakeRegistrationSection from "./registrationSection.js";
-import buildMakeRegistration from "./registration.js";
+import buildMakeEventRegistrationSection from "./event-registration-section.js";
+import buildMakeEventRegistration from "./event-registration.js";
+import buildMakeRegistrationTemplate from "./registration-template.js";
 
-const makeEvent = buildMakeEvent();
-const makeRegistrationSection = buildMakeRegistrationSection();
-const makeRegistration = buildMakeRegistration();
+const makeEventRegistrationSection = buildMakeEventRegistrationSection();
+const makeEvent = buildMakeEvent({ makeEventRegistrationSection });
+const makeEventRegistration = buildMakeEventRegistration();
+const makeRegistrationTemplate = buildMakeRegistrationTemplate();
 
 export {
     makeEvent,
-    makeRegistrationSection,
-    makeRegistration
+    makeEventRegistrationSection,
+    makeEventRegistration,
+    makeRegistrationTemplate
 }

@@ -1,0 +1,22 @@
+{
+  "db": {
+    "connection": {
+      "host": "localhost",
+      "user": "root",
+      "password": "N207ES",
+      "database": "squadops_backend_local"
+    },
+    "createTables": true,
+    "alterTables": true
+  },
+  "stripe": {
+    "publicKey": "",
+    "secretKey": ""
+  },
+  "api-http": {
+    "port": 4050,
+    "headers": {
+      "accessToken": "x-squadops-access-token"
+    }
+  }
+}
